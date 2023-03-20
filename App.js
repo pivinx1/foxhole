@@ -6,12 +6,14 @@ export default function App() {
   let actualIPAddr;
   let devIPAddr = Network.getIpAddressAsync();
   if (devIPAddr == "0.0.0.0") {
-    actualIPAddr = "i couldn't get ur ip address"
+    actualIPAddr = "i couldn't get ur ip address";
+  } else {
+    actualIPAddr = devIPAddr;
   }
   return (
     <View style={styles.container}>
       <Text>you're IP address is:</Text>
-      <Text>$devIPAddr</Text>
+      <Text>{actualIPAddr}</Text>
       <Button onPress={() => Alert.alert("hello", "you probably pressed me")}/>
       <StatusBar style="auto" />
     </View>
