@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import * as Network from 'expo-network';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   let actualIPAddr;
